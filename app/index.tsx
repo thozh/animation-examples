@@ -43,6 +43,14 @@ export default function Page() {
       title: '10. Skia',
       link: { href: '/skia' },
     },
+    {
+      title: '11. Passcode Motion',
+      link: { href: '/passcode' },
+    },
+    {
+      title: '12. Messenger Gradient',
+      link: { href: '/messengerGradient' },
+    },
   ];
 
   return (
