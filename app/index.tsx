@@ -1,4 +1,5 @@
 import { Stack, Link, LinkProps } from 'expo-router';
+import { ScrollView } from 'moti';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
 export default function Page() {
@@ -51,19 +52,25 @@ export default function Page() {
       title: '12. Messenger Gradient',
       link: { href: '/messengerGradient' },
     },
+    {
+      title: '13. Scroll List',
+      link: { href: '/scrollList' },
+    },
   ];
 
   return (
     <View style={styles.container}>
       <View style={styles.main}>
         <Stack.Screen options={{ title: 'Animation Libraries' }} />
-        {examples.map(({ title, link }) => (
-          <Link href={link.href} key={link.href} asChild>
-            <TouchableOpacity style={styles.button}>
-              <Text style={styles.buttonText}>{title}</Text>
-            </TouchableOpacity>
-          </Link>
-        ))}
+        <ScrollView>
+          {examples.map(({ title, link }) => (
+            <Link href={link.href} key={link.href} asChild>
+              <TouchableOpacity style={styles.button}>
+                <Text style={styles.buttonText}>{title}</Text>
+              </TouchableOpacity>
+            </Link>
+          ))}
+        </ScrollView>
       </View>
     </View>
   );
