@@ -56,6 +56,10 @@ export default function Page() {
       title: '13. Scroll List',
       link: { href: '/scrollList' },
     },
+    {
+      title: '14. Animated Indicator',
+      link: { href: '/animatedIndicator' },
+    },
   ];
 
   return (
